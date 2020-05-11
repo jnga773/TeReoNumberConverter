@@ -11,9 +11,11 @@ def TeReoNumberConverter(input_number_str):
     # Read numerical input from console
     input_number_int = int(input_number_str)
     input_number_str = str(input_number_int)
-    input_number_fill = input_number_str.zfill(7)
+    input_number_fill = input_number_str.zfill(12)
     # List of tens
-    tens_str = [" miriona", " rau mano", " tekau mano", " mano",
+    tens_str = [" rau piriona", " tekau piriona", " piriona",
+                " rau miriona"," tekau miriona", " miriona",
+                " rau mano", " tekau mano", " mano",
                 " rau", " tekau", "mā"]
     # List of numbers from 0-9
     digits_str = ["kore", "kotahi", "rua", "toru", "whā", "rima", "ono",
@@ -80,47 +82,28 @@ def TeReoNumberConverter(input_number_str):
         else:
             commas.append(" mā ")
         # Split output_string into different components for each tens
-        # Millions
-        if nums_list[0] != 0:
-            output = "{}{}{}".format(str_list[0], tens_str[0], commas[0])
-        else:
-            output = ""
-        # Hundred thousands
-        if nums_list[1] != 0:
-            output += "{}{}{}".format(str_list[1], tens_str[1], commas[1])
-        else:
-            output += ""
-        # Ten thousands
-        if nums_list[2] != 0:
-            output += "{}{}{}".format(str_list[2], tens_str[2], commas[2])
-        else:
-            output += ""
-        # Thousands
-        if nums_list[3] != 0:
-            output += "{}{}{}".format(str_list[3], tens_str[3], commas[3])
-        else:
-            output += ""
-        # Hundreds
-        if nums_list[4] != 0:
-            output += "{}{}{}".format(str_list[4], tens_str[4], commas[4])
-        else:
-            output += ""
+        output = ""
+        for element, number in enumerate(nums_list[:-2]):
+            if number != 0:
+                output += "{}{}{}".format(str_list[element], out_tens[element], commas[element])
+            else:
+                output += ""
         # Tens
-        if nums_list[5] != 0:
+        if nums_list[-2] != 0:
             # If the tens digit is 1, print nothing, instead of "kotahi tekau"
-            if nums_list[5] == 1:
+            if nums_list[-2] == 1:
                 output += "tekau"
             else:
-                output += "{}{}".format(str_list[5], tens_str[5])
+                output += "{}{}".format(str_list[-2], out_tens[-2])
         else:
             output += ""
         # Ones
-        if nums_list[6] != 0:
+        if nums_list[-1] != 0:
             # If the ones digit is 1, print "tahi" instead of "kotahi"
-            if nums_list[6] == 1:
-                output += "{}tahi".format(commas[6])
+            if nums_list[-1] == 1:
+                output += "{}tahi".format(commas[-1])
             else:
-                output += "{}{}".format(commas[6], str_list[6])
+                output += "{}{}".format(commas[-1], str_list[-1])
     # Return output
     return output
 
@@ -140,7 +123,7 @@ class MainWindow(QMainWindow):
         AboutMenu = MainMenuBar.addMenu('&About')
 
         # About action
-        AboutAction = QAction("&About the App (v1.0)", self)
+        AboutAction = QAction("&About the App (v1.2)", self)
         AboutAction.setStatusTip("Information about the App")
         AboutAction.triggered.connect(self.AboutWindowPopup)
         # Add action to menu item
@@ -151,7 +134,7 @@ class MainWindow(QMainWindow):
         ##########################
         # Text to say what to input
         self.InputLabel = QLabel(self)
-        self.InputLabel.setText('Enter whole number (less than 10 Million):')
+        self.InputLabel.setText('Enter whole number (less than 10 brillion):')
         # LineEdit number input
         self.InputNumber = QLineEdit(self)
         self.InputNumber.setMaxLength(15)
@@ -166,7 +149,7 @@ class MainWindow(QMainWindow):
         # self.InputNumber.resize(200, 32)
         # self.InputLabel.move(20, 20)
         # Input okay button
-        InputButton = QPushButton('OK', self)
+        InputButton = QPushButton('Aue', self)
         # If button is clicked, calculate number
         InputButton.clicked.connect(self.ConvertNumber)
         # Move input button
@@ -215,7 +198,10 @@ class MainWindow(QMainWindow):
         msg.setTextInteractionFlags(Qt.TextSelectableByMouse)
         msg.setText("This app was devolped by Jacob Ngaha (j.ngaha@auckland.ac.nz). The source code is available at https://www.github.com/jnga773/TeReoNumberConverter")
         # msg.setInformativeText("The source code is available at https://www.github.com/jnga773/TeReoNumberConverter")
-        msg.setWindowTitle("About Te Reo Number Converter")
+        msg.setDetailedText("v1.0 - Initial Release \n" +\
+                            "v1.1 - Changed 'kotahi tekau' to 'tekau' \n" +\
+                            "v1.2 - Increased range to 9,999,999,999 (just under 10 billion)")
+        msg.setWindowTitle("About Te Reo Number Converter (v1.2)")
         msg.setStandardButtons(QMessageBox.Ok)
         msg.show()
         msg.exec_()
