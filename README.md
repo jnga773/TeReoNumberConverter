@@ -12,7 +12,7 @@ python TeReoConverter.py
 
 Otherwise, to build the single-file executable program, run
 ```
---onefile --windowed --icon=./build_files/animal-dog.ico ./build_files/TeReoConverter.py
+pyinstaller --onefile --windowed --icon=./build_files/animal-dog.ico ./build_files/TeReoConverter.py
 ```
 
 The icon used (animal-dog.png) is taken from the Fugue Icons set by [Yusuke Kamiyamane](https://p.yusukekamiyamane.com/) under [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/). It was converted to an `.ico` file with [IcoConvert](https://icoconvert.com/Multi_Image_to_one_icon/) tool.

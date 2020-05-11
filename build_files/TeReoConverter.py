@@ -107,7 +107,11 @@ def TeReoNumberConverter(input_number_str):
             output += ""
         # Tens
         if nums_list[5] != 0:
-            output += "{}{}".format(str_list[5], tens_str[5])
+            # If the tens digit is 1, print nothing, instead of "kotahi tekau"
+            if nums_list[5] == 1:
+                output += "tekau"
+            else:
+                output += "{}{}".format(str_list[5], tens_str[5])
         else:
             output += ""
         # Ones
