@@ -18,7 +18,7 @@ pyinstaller --onefile --windowed --icon=./build_files/Icon.ico ./build_files/TeR
 The icon used (animal-dog.png) is taken from the Fugue Icons set by [Yusuke Kamiyamane](https://p.yusukekamiyamane.com/) under [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/). It was converted to an `.ico` file with [IcoConvert](https://icoconvert.com/Multi_Image_to_one_icon/) tool.
 
 ## Screenshots
-![Windows](./dist/screencap_windows.png)
+![Windows](https://github.com/jnga773/TeReoNumberConverter/blob/master/dist/screencap_windows.PNG)
 
 ## Update History
  - v1.0 - Initial Release
