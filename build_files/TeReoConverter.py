@@ -20,7 +20,7 @@ class MainWindow(QMainWindow):
         AboutMenu = MainMenuBar.addMenu('&About')
 
         # About action
-        AboutAction = QAction("&About the App (v1.2)", self)
+        AboutAction = QAction("&About the App (v1.2.1)", self)
         AboutAction.setStatusTip("Information about the App")
         AboutAction.triggered.connect(self.AboutWindowPopup)
         # Add action to menu item
