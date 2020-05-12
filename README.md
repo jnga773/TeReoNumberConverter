@@ -21,3 +21,4 @@ The icon used (animal-dog.png) is taken from the Fugue Icons set by [Yusuke Kami
  - v1.0 - Initial Release
  - v1.1 - Fixed bug where "10" would be printed as "kotahi tekau". Also changed "1" in ones column from "kotahi" to "tahi".
  - v1.2 - Increased range to < 10 billion (max 9,999,999,999). The character limit in the input box is 10 characters.
+ - v1.2.1 - Fixed typo

@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['build_files\\TeReoConverter.py'],
-             pathex=['C:\\Users\\nexus\\Desktop\\TeReoNumberConverter'],
+             pathex=['C:\\Users\\Jacob\\Desktop\\TeReoNumberConverter'],
              binaries=[],
              datas=[],
              hiddenimports=[],
