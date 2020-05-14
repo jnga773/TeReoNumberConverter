@@ -21,7 +21,7 @@ The icon used (animal-dog.png) is taken from the Fugue Icons set by [Yusuke Kami
 ### Windows
 ![Windows](https://github.com/jnga773/TeReoNumberConverter/blob/master/dist/screencap_windows.PNG)
 ### Linux (Ubuntu 18.04)
-![Linux)(https://github.com/jnga773/TeReoNumberConverter/blob/master/dist/screencap_linux.png)
+![Linux](https://github.com/jnga773/TeReoNumberConverter/blob/master/dist/screencap_linux.png)
 
 ## Update History
  - v1.0 - Initial Release
