@@ -5,9 +5,9 @@ pip install PyQt5==5.9.2
 pip install pyinstaller
 ```
 
-The main file `TeReoConverter.py` works without `pyinstaller` and can be run with
+The main file `TeReoNumberConverter_GUI.py` works without `pyinstaller` and can be run with
 ```
-python TeReoConverter.py
+python .\build_files\TeReoNumberConverter_GUI.py
 ```
 
 Otherwise, to build the single-file executable program, run
