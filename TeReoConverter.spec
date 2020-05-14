@@ -1,10 +1,10 @@
-# -*- mode: python ; coding: utf-8 -*-
+# -*- mode: python -*-
 
 block_cipher = None
 
 
-a = Analysis(['build_files/TeReoConverter.py'],
-             pathex=['/media/Data/Documents/Github/TeReoNumberConverter'],
+a = Analysis(['build_files\\TeReoConverter.py'],
+             pathex=['E:\\Documents\\GitHub\\TeReoNumberConverter'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -28,6 +28,5 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          upx_exclude=[],
           runtime_tmpdir=None,
-          console=False , icon='build_files/Icon.ico')
+          console=False , icon='build_files\\Icon.ico')
