@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
-from _converter_function import TeReoNumberConverter
+from _converter_function import _ones_translator, _hundreds_translator, TeReoNumberConverter
 
 # Define class for main window
 class MainWindow(QMainWindow):
