@@ -7,7 +7,7 @@ pip install pyinstaller
 
 The main file `TeReoNumberConverter_GUI.py` works without `pyinstaller` and can be run with
 ```
-python .\build_files\TeReoNumberConverter_GUI.py
+python ./build_files/TeReoNumberConverter_GUI.py
 ```
 
 Otherwise, to build the single-file executable program, run
