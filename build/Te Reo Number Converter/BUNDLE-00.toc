@@ -1,0 +1,3 @@
+([('Te Reo Number Converter',
+   '/Users/jacob/Desktop/TeReoNumberConverter/dist/Te Reo Number Converter',
+   'EXECUTABLE')],)
